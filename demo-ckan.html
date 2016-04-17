@@ -43,7 +43,7 @@
 
 <form class="search">
 <input type="search" />
-<button type="submit" />Go</button>
+<button type="submit" />Search</button>
 </form>
 
 <div class="pager-here"></div>
@@ -52,7 +52,7 @@
 
 <script type="text/javascript">
 var dataset = new recline.Model.Dataset({
-  url: 'http://www.civicdata.com/dataset/lexington-building-permits/resource/2691aff1-e555-48d3-9188-aebf1fa8323e',
+  url: decodeURIComponent(document.location.hash.replace('#', '')),
   backend: 'ckan',
 });
 
